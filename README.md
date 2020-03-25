@@ -1,11 +1,11 @@
 # LightWeightDIL 
 
- Light dependancy Injection Library(LightWeightDIL) privde organised way for separation of concern  your  in your software system. 
+ Light dependancy Injection Library(LightWeightDIL) provide way in your software system for seperation of concerns and increase testablity. 
 
-The functional use case considered for developing this framework 
-Inject mock dependency that would support unit testing 
-Generic framework which can be used with minimal constraints 
-Possibility to extend the capability of resolving dependency.
+#### The functional use case considered for developing this library #### 
+- Inject mock dependency that would support unit testing 
+- Generic framework which can be used with minimal constraints 
+- Possibility to extend the capability of resolving dependency.
 
 The above not an exhaustive list, however these where the thoughts that lead to the light weight library.
 
