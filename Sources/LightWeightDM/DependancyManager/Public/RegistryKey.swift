@@ -6,10 +6,10 @@
 //  Copyright © 2020 Sreejith. All rights reserved.
 //
 
-public struct RegistryKey: Hashable {
+public struct RegistryKey: Hashable, ExpressibleByStringLiteral {
     var name: String
 
-    init(stringLiteral name: String) {
+    public init(stringLiteral name: String) {
         self.name = name
     }
 

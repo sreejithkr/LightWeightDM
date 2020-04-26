@@ -1,12 +1,12 @@
 //
 //  ResolverTests.swift
-//  SampleLightWeightDIL
+//  LightWeightDM
 //
 //  Created by Sreejith on 25/03/20.
 //
 
 import XCTest
-@testable import LightWeightDIL
+@testable import LightWeightDM
 
 class ResolverTests: XCTestCase {
     

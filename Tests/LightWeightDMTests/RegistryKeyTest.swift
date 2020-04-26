@@ -1,13 +1,13 @@
 //
 //  RegistryKeyTest.swift
-//  SampleLightWeightDIL
+//  LightWeightDM
 //
 //  Created by Sreejith on 25/03/20.
 //  Copyright © 2020 Sreejith. All rights reserved.
 //
 
 import XCTest
-@testable import LightWeightDIL
+@testable import LightWeightDM
 
 class RegistryKeyTest: XCTestCase {
     

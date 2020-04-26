@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "LightWeightDIL",
+    name: "LightWeightDM",
     products: [
         .library(
-            name: "LightWeightDIL",
-            targets: ["LightWeightDIL"]),
+            name: "LightWeightDM",
+            targets: ["LightWeightDM"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "LightWeightDIL",
+            name: "LightWeightDM",
             dependencies: []),
         .testTarget(
-            name: "LightWeightDILTests",
-            dependencies: ["LightWeightDIL"]),
+            name: "LightWeightDMTests",
+            dependencies: ["LightWeightDM"]),
     ]
 )

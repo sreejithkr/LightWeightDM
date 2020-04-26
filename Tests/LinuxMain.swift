@@ -1,7 +1,7 @@
 import XCTest
 
-import LightWeightDILTests
+import LightWeightDMTests
 
 var tests = [XCTestCaseEntry]()
-tests += LightWeightDILTests.allTests()
+tests += LightWeightDMTests.allTests()
 XCTMain(tests)

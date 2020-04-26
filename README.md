@@ -1,6 +1,6 @@
-# LightWeightDIL 
+# LightWeightDM 
 
- Light dependancy Injection Library(LightWeightDIL) provide way in your software system for seperation of concerns and increase testablity. 
+ Light dependancy Injection Library(LightWeightDM) provide way in your software system for seperation of concerns and increase testablity. 
 
 #### The functional use case considered for developing this library #### 
 - Inject mock dependency that would support unit testing 

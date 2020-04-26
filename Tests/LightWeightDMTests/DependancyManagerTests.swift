@@ -1,40 +1,38 @@
 //
 //  DependancyManagerTests.swift
-//  SampleLightWeightDIL
+//  LightWeightDM
 //
 //  Created by Sreejith on 14/03/20.
 //  Copyright © 2020 Sreejith. All rights reserved.
 //
 
 import XCTest
-@testable import LightWeightDIL
+@testable import LightWeightDM
 
 class DependancyManagerTests: XCTestCase {
     var dependencyManager: DependancyManager!
+
     override func setUp() {
         dependencyManager = DependancyManager()
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
     
     func testIfRegisterWillAddDependencyForReplaceFalse() {
-        let key = RegistryKey(stringLiteral: "mock_key")
+        let key: RegistryKey = "mock_key"
         let resolver = Resolver.directType(MockDependency.self)
         dependencyManager.register(for: key, with: resolver, replace: false)
         XCTAssertNotNil(dependencyManager.dependency(for: key))
     }
 
     func testIfRegisterWillAddDependencyForReplaceTrue() {
-        let key = RegistryKey(stringLiteral: "mock_key")
+        let key: RegistryKey = "mock_key"
         let resolver = Resolver.directType(MockDependency.self)
         dependencyManager.register(for: key, with: resolver, replace: true)
         XCTAssertNotNil(dependencyManager.dependency(for: key))
     }
     
     func testIfRegisterdDeppedancyTypeIsReplaced() {
-        let key = RegistryKey(stringLiteral: "mock_key")
+        let key: RegistryKey = "mock_key"
         let resolver1 = Resolver.directType(MockDependency.self)
         dependencyManager.register(for: key, with: resolver1, replace: true)
         let dependency: MockDependency! = dependencyManager.dependency(for: key)
@@ -48,7 +46,7 @@ class DependancyManagerTests: XCTestCase {
     }
     
     func testIfRegisterdDeppedancyTypeIsNotReplaced() {
-        let key = RegistryKey(stringLiteral: "mock_key")
+        let key: RegistryKey = "mock_key"
         let resolver1 = Resolver.directType(MockDependency.self)
         dependencyManager.register(for: key, with: resolver1, replace: false)
         var dependency: MockDependency! = dependencyManager.dependency(for: key)
@@ -63,7 +61,7 @@ class DependancyManagerTests: XCTestCase {
     }
 
     func testIfDeppedancyTypeReturnsCorrectRegisterdType() {
-        let key = RegistryKey(stringLiteral: "mock_key")
+        let key: RegistryKey = "mock_key"
         let resolver = Resolver.directType(MockDependency.self)
         dependencyManager.register(for: key, with: resolver, replace: true)
         let dependency: MockDependency.Type! = dependencyManager.dependencyType(for: key)
@@ -72,7 +70,7 @@ class DependancyManagerTests: XCTestCase {
     
     
     func testIfDeppedancyTypeReplacesDependencyForTrueFlag() {
-        let key = RegistryKey(stringLiteral: "mock_key")
+        let key: RegistryKey = "mock_key"
         let resolver1 = Resolver.directType(MockDependency.self)
         dependencyManager.register(for: key, with: resolver1, replace: true)
         let dependency: MockDependency.Type! = dependencyManager.dependencyType(for: key)
@@ -85,7 +83,7 @@ class DependancyManagerTests: XCTestCase {
     }
 
     func testIfDeppedancyTypeDoesNotReplacesDependencyForFalseFlag() {
-        let key = RegistryKey(stringLiteral: "mock_key")
+        let key: RegistryKey = "mock_key"
         let resolver1 = Resolver.directType(MockDependency.self)
         dependencyManager.register(for: key, with: resolver1, replace: false)
         var dependency: MockDependency.Type! = dependencyManager.dependencyType(for: key)
